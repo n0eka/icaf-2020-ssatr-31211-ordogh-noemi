@@ -1,0 +1,71 @@
+{
+  "locations": [
+    { "name": "P0", "type": "start" },
+    { "name": "P1", "type": "middle" },
+    { "name": "P2", "type": "middle" },
+    { "name": "P3", "type": "middle" },
+    { "name": "P4", "type": "middle" },
+    { "name": "P5", "type": "middle" },
+    { "name": "P6", "type": "middle" },
+    { "name": "P7", "type": "middle" },
+    { "name": "P8", "type": "middle" },
+    { "name": "P9", "type": "middle" },
+    { "name": "P10", "type": "middle" },
+    { "name": "P12", "type": "middle" },
+    { "name": "P13", "type": "end" }
+  ],
+
+  "transitions": [
+    {
+      "name": "T0",
+      "duration": ["0"],
+      "inputs": ["P0"],
+      "outputs": ["P1", "P2"]
+    },
+    { "name": "T1", "duration": ["1"], "inputs": ["P1"], "outputs": ["P3"] },
+    { "name": "T2", "duration": ["4"], "inputs": ["P2"], "outputs": ["P5"] },
+    {
+      "name": "T3",
+      "duration": ["0"],
+      "inputs": ["P3", "P4"],
+      "outputs": ["P7"]
+    },
+    {
+      "name": "T4",
+      "duration": ["0"],
+      "inputs": ["P5", "P6"],
+      "outputs": ["P8"]
+    },
+    {
+      "name": "T5",
+      "duration": ["2", "4"],
+      "inputs": ["P7", "P6"],
+      "outputs": ["P9"]
+    },
+    {
+      "name": "T6",
+      "duration": ["2", "5"],
+      "inputs": ["P4", "P8"],
+      "outputs": ["P10"]
+    },
+    {
+      "name": "T7",
+      "duration": ["3", "4"],
+      "inputs": ["P9"],
+      "outputs": ["P4", "P6", "P11"]
+    },
+    {
+      "name": "T8",
+      "duration": ["2", "3"],
+      "inputs": ["P10"],
+      "outputs": ["P12", "P4", "P6"]
+    },
+    {
+      "name": "T9",
+      "duration": ["0"],
+      "inputs": ["P11", "P12"],
+      "outputs": ["P13"]
+    },
+    { "name": "T10", "duration": ["0"], "inputs": ["P13"], "outputs": ["0"] }
+  ]
+}
